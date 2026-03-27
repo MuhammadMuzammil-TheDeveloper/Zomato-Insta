@@ -1,6 +1,7 @@
 //  create Server
 const express = require('express');
 const cookieParser = require('cookie-parser');
+const authRoutes = require('./routes/auth.routes')
 
 
 
@@ -12,8 +13,8 @@ app.use(cookieParser());
 
 app.get("/", (req, res) => {
     res.send("Welcome to  Insta");
-  
 })
+app.use('/api/auth', authRoutes) // api call ke he mene 
 
 
 module.exports = app;
