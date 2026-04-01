@@ -16,5 +16,4 @@ app.get("/", (req, res) => {
 })
 app.use('/api/auth', authRoutes) // api call ke he mene 
 
-
 module.exports = app;
